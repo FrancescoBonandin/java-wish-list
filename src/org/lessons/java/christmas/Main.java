@@ -42,6 +42,8 @@ public class Main {
 		String strOrderingChoice = in.nextLine();
 		int orderingChoice = Integer.valueOf(strOrderingChoice);
 		
+		in.close();
+		
 		if(orderingChoice == 1) wishlist.sort( Comparator.comparing(regalo->regalo.person));
 		
 		else if(orderingChoice == 2)wishlist.sort( Comparator.comparing(regalo->regalo.person));
