@@ -12,7 +12,7 @@ public class Main {
 		
 		Scanner in = new Scanner(System.in);
 		
-		List <Gift> wishlist= new ArrayList<>();
+		ArrayList <Gift> wishlist= new ArrayList<>();
 		
 		do {
 			
@@ -25,6 +25,8 @@ public class Main {
 			wishlist.add(entry);
 			
 			System.out.println("hai aggiunto " + entry);
+			
+			System.out.println("la lista contiene " + wishlist.size() + (wishlist.size() > 0 && wishlist.size() < 2 ? " regalo" : " regali"));
 			
 			System.out.println("vuoi aggiungere un altro regalo? (y/n)");
 			String strChoice = in.nextLine().toLowerCase();
@@ -47,6 +49,7 @@ public class Main {
 		if(orderingChoice == 1) wishlist.sort( Comparator.comparing(regalo->regalo.person));
 		
 		else if(orderingChoice == 2)wishlist.sort( Comparator.comparing(regalo->regalo.person));
+		
 		
 		
 		
